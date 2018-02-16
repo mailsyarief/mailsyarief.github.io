@@ -3,38 +3,66 @@
 <head>
 	<title>Converter</title>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 </head>
 <body>
-
-<!--TITLE-->
-<div class="container">
-	<div class="row" id="logo">	
-		<h1 style="color: tomato">converter</h1>
-	</div>	
-</div>
-<!--ENDTITLE-->
-
 <!--BODY-->
-<div class="container">
-	<div class="row">
-		<div class="col-6" id="kanan">
-			    <input type="text" placeholder="input number" />
-		</div>
-		<div class="col-6">
-
-		</div>	
-	</div>
+<h2>converter</h2>
+<div class="row">
+    <div class="container">
+    	<div class="col-6">
+        	<input id="lbsinput" type="number" placeholder="kilograms">
+            <span class="focus-border"></span>
+        </div>
+        <br>
+    	<div class="col-6" id="output">
+    		<div class="card">
+			  <div class="container">
+			  		<h4>Gram :</h4>
+					<div id="grams-output"></div>
+			  </div>
+			</div> 
+    		<div class="card">
+			  <div class="container">
+			  		<h4>Miligram :</h4>
+					<div id="miligram-output"></div>
+			  </div>
+			</div> 
+    		<div class="card">
+			  <div class="container">
+			  		<h4>Pounds :</h4>
+					<div id="pounds-output"></div>
+			  </div>
+    		<div class="card">
+			  <div class="container">
+			  		<h4>ounce/oz :</h4>
+					<div id="ounce-output"></div>
+			  </div>
+			</div> 
+        </div>
+    </div>
 </div>
+<br>
+
 <!--ENDBODY-->
 
-
-
-
-
 <!-- Java Script -->
+	<script>
+		document.getElementById('output').style.visibility = 'hidden';
+		document.getElementById('lbsinput').addEventListener('input', function(e)
+		{
+			document.getElementById('output').style.visibility = 'visible';
+			let kg = e.target.value;
+			document.getElementById('grams-output').innerHTML = kg*1000;
+			document.getElementById('miligram-output').innerHTML = kg*1000000;
+			document.getElementById('pounds-output').innerHTML = kg*2,20462;
+			document.getElementById('ounce-output').innerHTML = kg*35.274;
+		});
+	</script>
 
 <script src="particles.js"></script>
 

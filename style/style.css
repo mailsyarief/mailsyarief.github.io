@@ -1,24 +1,80 @@
-body
-{
-  margin: 0;
+body {
+  border: 0; 
+  margin: 0; 
   padding: 0;
-
-  background: #232323;
-  color: #cdcdcd;
-  font-family: 'Arvo', serif;
+  font-family: 'Cabin', sans-serif;  
+  min-height: 100%; 
+  background-color: #232323;
 }
 
-#logo h1
+.container{
+  margin: 0 auto; 
+  max-width: 1000px;
+}
+
+.row{
+  width: 100%; 
+  padding-top: 50px;
+}
+
+h4{
+  color: tomato;
+}
+
+h2{
+  font-family: 'Lobster', cursive;
+  text-align: center; 
+  color: tomato; 
+  font-weight: bold;
+  font-size: 50px; 
+  float: left; 
+  width: 100%; 
+  margin: 30px 0; 
+  position: relative; 
+  line-height: 58px; 
+  font-weight: 400;
+}
+
+.col-6
 {
-  text-align: center;
+  width: 90%; 
+  position: relative;
+  margin-left: 50px;
 }
 
-
-#kanan{
-  padding-left: 40px;
+input{ 
+  background: transparent;
+  width: 100%; 
+  box-sizing: border-box; 
+  letter-spacing: 1px;
 }
 
-#kanan input{
-  border: none;
-  border-color: none;
+#output{
+  background-color: #efefef;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  border-radius: 4px;
 }
+
+#lbsinput{
+  border: 0; 
+  padding: 10px 0; 
+  border-bottom: 1px solid #ccc;}
+
+#lbsinput ~ .focus-border{
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  width: 0; 
+  height: 2px; 
+  background-color: tomato; 
+  transition: 0.4s;
+}
+
+#lbsinput:focus ~ .focus-border{
+  width: 100%; 
+  transition: 0.4s;
+}
+

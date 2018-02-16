@@ -35,6 +35,10 @@ h2{
   font-weight: 400;
 }
 
+input, select, textarea {
+color: tomato;
+}
+
 .col-6
 {
   width: 90%; 

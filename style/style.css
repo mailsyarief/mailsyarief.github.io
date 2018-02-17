@@ -13,7 +13,7 @@ body {
 }
 
 .row{
-  width: 100%; 
+  width: auto;
   padding-top: 50px;
 }
 
@@ -54,6 +54,8 @@ input{
 }
 
 #output{
+  width: auto;
+  max-width: 86%;
   background-color: #efefef;
     padding-top: 10px;
     padding-right: 20px;
@@ -64,8 +66,9 @@ input{
 
 #lbsinput{
   border: 0; 
-  padding: 10px 0; 
-  border-bottom: 1px solid #ccc;}
+  max-width: 100%;
+  padding: 10px 10px; 
+  border-bottom: 2px solid #ccc;}
 
 #lbsinput ~ .focus-border{
   position: absolute; 
@@ -75,6 +78,7 @@ input{
   height: 2px; 
   background-color: tomato; 
   transition: 0.4s;
+  max-width: 100%;
 }
 
 #lbsinput:focus ~ .focus-border{
